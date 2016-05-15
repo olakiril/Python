@@ -1,0 +1,1216 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>datajoint 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="None" href="index.html#document-index"/>
+ 
+<!-- RTD Extra Head -->
+
+    
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://datajoint-python.readthedocs.org/en/latest/" />
+<script type="text/javascript">
+  // This is included here because other places don't have access to the pagename variable.
+  var READTHEDOCS_DATA = {
+    project: "datajoint-python",
+    version: "latest",
+    language: "en",
+    page: "index",
+    builder: "sphinx",
+    theme: "sphinx_rtd_theme",
+    docroot: "/doc/source/",
+    
+    source_suffix: ".rst",
+    
+    api_host: "https://readthedocs.org/",
+    commit: "df063247"
+  }
+  // Old variables
+  var doc_version = "latest";
+  var doc_slug = "datajoint-python";
+  var page_name = "index";
+  var html_theme = "sphinx_rtd_theme";
+</script>
+<!-- RTD Analytics Code -->
+<!-- Included in the header because you don't have a footer block. -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17997319-1']);
+  _gaq.push(['_trackPageview']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- end RTD Analytics Code -->
+<!-- end RTD <extrahead> -->
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html#document-index" class="icon icon-home"> datajoint
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-tiers">Datajoint Tiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-relation">Relation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-relational_operand">Relational operand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-connection">Connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-blob">Serialization Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-declare">Mysql table declaration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-utils">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-fetch">Fetch objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-settings">Config</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html#document-index">datajoint</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html#document-index">Docs</a> &raquo;</li>
+      
+    <li>datajoint 0.1 documentation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/datajoint/datajoint-python/blob/master/doc/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-datajoint-s-documentation">
+<h1>Welcome to datajoint&#8217;s documentation!<a class="headerlink" href="#welcome-to-datajoint-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>API:</p>
+<div class="toctree-wrapper compound">
+<span id="document-tiers"></span><div class="section" id="datajoint-tiers">
+<h2>Datajoint Tiers<a class="headerlink" href="#datajoint-tiers" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-user_relations"></span><div class="section" id="module-datajoint.user_relations">
+<span id="user-tiers"></span><h3>User Tiers<a class="headerlink" href="#module-datajoint.user_relations" title="Permalink to this headline">¶</a></h3>
+<p>Hosts the table tiers, user relations should be derived from.</p>
+<dl class="class">
+<dt id="datajoint.user_relations.Computed">
+<em class="property">class </em><code class="descclassname">datajoint.user_relations.</code><code class="descname">Computed</code><a class="headerlink" href="#datajoint.user_relations.Computed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit from this class if the table&#8217;s values are computed from other relations in the schema.
+The inherited class must at least provide the function <cite>_make_tuples</cite>.</p>
+<dl class="attribute">
+<dt id="datajoint.user_relations.Computed.table_name">
+<code class="descname">table_name</code><a class="headerlink" href="#datajoint.user_relations.Computed.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the table name of the table formatted for mysql.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.user_relations.Imported">
+<em class="property">class </em><code class="descclassname">datajoint.user_relations.</code><code class="descname">Imported</code><a class="headerlink" href="#datajoint.user_relations.Imported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit from this class if the table&#8217;s values are imported from external data sources.
+The inherited class must at least provide the function <cite>_make_tuples</cite>.</p>
+<dl class="attribute">
+<dt id="datajoint.user_relations.Imported.table_name">
+<code class="descname">table_name</code><a class="headerlink" href="#datajoint.user_relations.Imported.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the table name of the table formatted for mysql.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.user_relations.Lookup">
+<em class="property">class </em><code class="descclassname">datajoint.user_relations.</code><code class="descname">Lookup</code><a class="headerlink" href="#datajoint.user_relations.Lookup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit from this class if the table&#8217;s values are for lookup. This is
+currently equivalent to defining the table as Manual and serves semantic
+purposes only.</p>
+<dl class="attribute">
+<dt id="datajoint.user_relations.Lookup.table_name">
+<code class="descname">table_name</code><a class="headerlink" href="#datajoint.user_relations.Lookup.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the table name of the table formatted for mysql.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.user_relations.Manual">
+<em class="property">class </em><code class="descclassname">datajoint.user_relations.</code><code class="descname">Manual</code><a class="headerlink" href="#datajoint.user_relations.Manual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit from this class if the table&#8217;s values are entered manually.</p>
+<dl class="attribute">
+<dt id="datajoint.user_relations.Manual.table_name">
+<code class="descname">table_name</code><a class="headerlink" href="#datajoint.user_relations.Manual.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the table name of the table formatted for mysql.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.user_relations.Part">
+<em class="property">class </em><code class="descclassname">datajoint.user_relations.</code><code class="descname">Part</code><a class="headerlink" href="#datajoint.user_relations.Part" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit from this class if the table&#8217;s values are details of an entry in another relation
+and if this table is populated by this relation. For example, the entries inheriting from
+dj.Part could be single entries of a matrix, while the parent table refers to the entire matrix.
+Part relations are implemented as classes inside classes.</p>
+</dd></dl>
+
+</div>
+<span id="document-autopopulate"></span><div class="section" id="module-datajoint.autopopulate">
+<span id="autopopulate"></span><h3>AutoPopulate<a class="headerlink" href="#module-datajoint.autopopulate" title="Permalink to this headline">¶</a></h3>
+<p>autopopulate containing the dj.AutoPopulate class. See <cite>dj.AutoPopulate</cite> for more info.</p>
+<dl class="class">
+<dt id="datajoint.autopopulate.AutoPopulate">
+<em class="property">class </em><code class="descclassname">datajoint.autopopulate.</code><code class="descname">AutoPopulate</code><a class="headerlink" href="#datajoint.autopopulate.AutoPopulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>AutoPopulate is a mixin class that adds the method populate() to a Relation class.
+Auto-populated relations must inherit from both Relation and AutoPopulate,
+must define the property populated_from, and must define the callback method _make_tuples.</p>
+<dl class="method">
+<dt id="datajoint.autopopulate.AutoPopulate.populate">
+<code class="descname">populate</code><span class="sig-paren">(</span><em>restriction=None</em>, <em>suppress_errors=False</em>, <em>reserve_jobs=False</em>, <em>order='original'</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.autopopulate.AutoPopulate.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>rel.populate() calls rel._make_tuples(key) for every primary key in self.populated_from
+for which there is not already a tuple in rel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>restriction</strong> &#8211; restriction on rel.populated_from - target</li>
+<li><strong>suppress_errors</strong> &#8211; suppresses error if true</li>
+<li><strong>reserve_jobs</strong> &#8211; if true, reserves job to populate in asynchronous fashion</li>
+<li><strong>order</strong> &#8211; &#8220;original&#8221;|&#8221;reverse&#8221;|&#8221;random&#8221;  - the order of execution</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.autopopulate.AutoPopulate.populated_from">
+<code class="descname">populated_from</code><a class="headerlink" href="#datajoint.autopopulate.AutoPopulate.populated_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the relation whose primary key values are passed, sequentially, to the
+<cite>_make_tuples</cite> method when populate() is called.The default value is the
+join of the parent relations. Users may override to change the granularity
+or the scope of populate() calls.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.autopopulate.AutoPopulate.progress">
+<code class="descname">progress</code><span class="sig-paren">(</span><em>restriction=None</em>, <em>display=True</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.autopopulate.AutoPopulate.progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>report progress of populating this table
+:return: remaining, total &#8211; tuples to be populated</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.autopopulate.AutoPopulate.target">
+<code class="descname">target</code><a class="headerlink" href="#datajoint.autopopulate.AutoPopulate.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation to be populated.
+Typically, AutoPopulate are mixed into a Relation object and the target is self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+<span id="document-relation"></span><div class="section" id="relation">
+<h2>Relation<a class="headerlink" href="#relation" title="Permalink to this headline">¶</a></h2>
+</div>
+<span id="document-relational_operand"></span><div class="section" id="module-datajoint.relational_operand">
+<span id="relational-operand"></span><h2>Relational operand<a class="headerlink" href="#module-datajoint.relational_operand" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="datajoint.relational_operand.AndList">
+<em class="property">class </em><code class="descclassname">datajoint.relational_operand.</code><code class="descname">AndList</code><span class="sig-paren">(</span><em>heading</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.AndList" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of restrictions to by applied to a relation.  The restrictions are ANDed.
+Each restriction can be a list or set or a relation whose elements are ORed.
+But the elements that are lists can contain</p>
+<dl class="method">
+<dt id="datajoint.relational_operand.AndList.count">
+<code class="descname">count</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span> &rarr; integer -- return number of occurrences of value<a class="headerlink" href="#datajoint.relational_operand.AndList.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.AndList.index">
+<code class="descname">index</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span> &rarr; integer -- return first index of value.<a class="headerlink" href="#datajoint.relational_operand.AndList.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raises ValueError if the value is not present.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.AndList.where_clause">
+<code class="descname">where_clause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.AndList.where_clause" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert to a WHERE clause string</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.relational_operand.Join">
+<em class="property">class </em><code class="descclassname">datajoint.relational_operand.</code><code class="descname">Join</code><span class="sig-paren">(</span><em>arg1</em>, <em>arg2</em>, <em>left=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational join</p>
+<dl class="method">
+<dt id="datajoint.relational_operand.Join.aggregate">
+<code class="descname">aggregate</code><span class="sig-paren">(</span><em>group</em>, <em>*attributes</em>, <em>**renamed_attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Join.aggregate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational aggregation operator</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>group</strong> &#8211; relation whose tuples can be used in aggregation operators</li>
+<li><strong>attributes</strong> &#8211; </li>
+<li><strong>renamed_attributes</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a relation representing the aggregation/projection operator result</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Join.attributes_in_restrictions">
+<code class="descname">attributes_in_restrictions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Join.attributes_in_restrictions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of attributes that are probably used in the restrictions.</td>
+</tr>
+</tbody>
+</table>
+<p>This is used internally for optimizing SQL statements</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Join.cursor">
+<code class="descname">cursor</code><span class="sig-paren">(</span><em>offset=0</em>, <em>limit=None</em>, <em>order_by=None</em>, <em>as_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Join.cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return query cursor.
+See Relation.fetch() for input description.
+:return: cursor to the query</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Join.project">
+<code class="descname">project</code><span class="sig-paren">(</span><em>*attributes</em>, <em>**renamed_attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Join.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational projection operator.
+:param attributes: a list of attribute names to be included in the result.
+:return: a new relation with selected fields
+Primary key attributes are always selected and cannot be excluded.
+Therefore obj.project() produces a relation with only the primary key attributes.
+If attributes includes the string &#8216;*&#8217;, all attributes are selected.
+Each attribute can only be used once in attributes or renamed_attributes.  Therefore, the projected
+relation cannot have more attributes than the original relation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Join.restrict">
+<code class="descname">restrict</code><span class="sig-paren">(</span><em>*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Join.restrict" title="Permalink to this definition">¶</a></dt>
+<dd><p>In-place restriction. Primarily intended for datajoint&#8217;s internal use.
+Users are encouraged to use self &amp; restriction to apply a restriction.
+Each condition in restrictions is applied and the conditions are combined with AND.
+However, each member of restrictions can be a list of conditions, which are combined with OR.
+:param restrictions: list of restrictions.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.relational_operand.Not">
+<em class="property">class </em><code class="descclassname">datajoint.relational_operand.</code><code class="descname">Not</code><span class="sig-paren">(</span><em>restriction</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Not" title="Permalink to this definition">¶</a></dt>
+<dd><p>invert restriction</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.relational_operand.RelationalOperand">
+<em class="property">class </em><code class="descclassname">datajoint.relational_operand.</code><code class="descname">RelationalOperand</code><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand" title="Permalink to this definition">¶</a></dt>
+<dd><p>RelationalOperand implements relational algebra and fetch methods.
+RelationalOperand objects reference other relation objects linked by operators.
+The leaves of this tree of objects are base relations.
+When fetching data from the database, this tree of objects is compiled into an SQL expression.
+It is a mixin class that provides relational operators, iteration, and fetch capability.
+RelationalOperand operators are: restrict, pro, and join.</p>
+<dl class="method">
+<dt id="datajoint.relational_operand.RelationalOperand.aggregate">
+<code class="descname">aggregate</code><span class="sig-paren">(</span><em>group</em>, <em>*attributes</em>, <em>**renamed_attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.aggregate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational aggregation operator</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>group</strong> &#8211; relation whose tuples can be used in aggregation operators</li>
+<li><strong>attributes</strong> &#8211; </li>
+<li><strong>renamed_attributes</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a relation representing the aggregation/projection operator result</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.RelationalOperand.attributes_in_restrictions">
+<code class="descname">attributes_in_restrictions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.attributes_in_restrictions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of attributes that are probably used in the restrictions.</td>
+</tr>
+</tbody>
+</table>
+<p>This is used internally for optimizing SQL statements</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.relational_operand.RelationalOperand.connection">
+<code class="descname">connection</code><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.connection" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a datajoint.Connection object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.RelationalOperand.cursor">
+<code class="descname">cursor</code><span class="sig-paren">(</span><em>offset=0</em>, <em>limit=None</em>, <em>order_by=None</em>, <em>as_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return query cursor.
+See Relation.fetch() for input description.
+:return: cursor to the query</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.relational_operand.RelationalOperand.from_clause">
+<code class="descname">from_clause</code><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.from_clause" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a string containing the FROM clause of the SQL SELECT statement</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.relational_operand.RelationalOperand.heading">
+<code class="descname">heading</code><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.heading" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a valid datajoint.Heading object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.RelationalOperand.project">
+<code class="descname">project</code><span class="sig-paren">(</span><em>*attributes</em>, <em>**renamed_attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational projection operator.
+:param attributes: a list of attribute names to be included in the result.
+:return: a new relation with selected fields
+Primary key attributes are always selected and cannot be excluded.
+Therefore obj.project() produces a relation with only the primary key attributes.
+If attributes includes the string &#8216;*&#8217;, all attributes are selected.
+Each attribute can only be used once in attributes or renamed_attributes.  Therefore, the projected
+relation cannot have more attributes than the original relation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.RelationalOperand.restrict">
+<code class="descname">restrict</code><span class="sig-paren">(</span><em>*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.restrict" title="Permalink to this definition">¶</a></dt>
+<dd><p>In-place restriction. Primarily intended for datajoint&#8217;s internal use.
+Users are encouraged to use self &amp; restriction to apply a restriction.
+Each condition in restrictions is applied and the conditions are combined with AND.
+However, each member of restrictions can be a list of conditions, which are combined with OR.
+:param restrictions: list of restrictions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.relational_operand.RelationalOperand.select_fields">
+<code class="descname">select_fields</code><a class="headerlink" href="#datajoint.relational_operand.RelationalOperand.select_fields" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string specifying the attributes to return</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.relational_operand.Subquery">
+<em class="property">class </em><code class="descclassname">datajoint.relational_operand.</code><code class="descname">Subquery</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Subquery" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Subquery encapsulates its argument in a SELECT statement, enabling its use as a subquery.
+The attribute list and the WHERE clause are resolved.
+As such, a subquery does not have any renamed attributes.</p>
+<dl class="method">
+<dt id="datajoint.relational_operand.Subquery.aggregate">
+<code class="descname">aggregate</code><span class="sig-paren">(</span><em>group</em>, <em>*attributes</em>, <em>**renamed_attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Subquery.aggregate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational aggregation operator</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>group</strong> &#8211; relation whose tuples can be used in aggregation operators</li>
+<li><strong>attributes</strong> &#8211; </li>
+<li><strong>renamed_attributes</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a relation representing the aggregation/projection operator result</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Subquery.attributes_in_restrictions">
+<code class="descname">attributes_in_restrictions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Subquery.attributes_in_restrictions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of attributes that are probably used in the restrictions.</td>
+</tr>
+</tbody>
+</table>
+<p>This is used internally for optimizing SQL statements</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Subquery.cursor">
+<code class="descname">cursor</code><span class="sig-paren">(</span><em>offset=0</em>, <em>limit=None</em>, <em>order_by=None</em>, <em>as_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Subquery.cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return query cursor.
+See Relation.fetch() for input description.
+:return: cursor to the query</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Subquery.project">
+<code class="descname">project</code><span class="sig-paren">(</span><em>*attributes</em>, <em>**renamed_attributes</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Subquery.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational projection operator.
+:param attributes: a list of attribute names to be included in the result.
+:return: a new relation with selected fields
+Primary key attributes are always selected and cannot be excluded.
+Therefore obj.project() produces a relation with only the primary key attributes.
+If attributes includes the string &#8216;*&#8217;, all attributes are selected.
+Each attribute can only be used once in attributes or renamed_attributes.  Therefore, the projected
+relation cannot have more attributes than the original relation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.relational_operand.Subquery.restrict">
+<code class="descname">restrict</code><span class="sig-paren">(</span><em>*restrictions</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.relational_operand.Subquery.restrict" title="Permalink to this definition">¶</a></dt>
+<dd><p>In-place restriction. Primarily intended for datajoint&#8217;s internal use.
+Users are encouraged to use self &amp; restriction to apply a restriction.
+Each condition in restrictions is applied and the conditions are combined with AND.
+However, each member of restrictions can be a list of conditions, which are combined with OR.
+:param restrictions: list of restrictions.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span id="document-connection"></span><div class="section" id="module-datajoint.connection">
+<span id="connection"></span><h2>Connection<a class="headerlink" href="#module-datajoint.connection" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>This module hosts the Connection class that manages the connection to the mysql database,</dt>
+<dd>and the <cite>conn</cite> function that provides access to a persistent connection in datajoint.</dd>
+</dl>
+<dl class="class">
+<dt id="datajoint.connection.Connection">
+<em class="property">class </em><code class="descclassname">datajoint.connection.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>host</em>, <em>user</em>, <em>passwd</em>, <em>init_fun=None</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.connection.Connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dj.Connection object manages a connection to a database server.
+It also catalogues modules, schemas, tables, and their dependencies (foreign keys).</p>
+<p>Most of the parameters below should be set in the local configuration file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host</strong> &#8211; host name</li>
+<li><strong>user</strong> &#8211; user name</li>
+<li><strong>passwd</strong> &#8211; password</li>
+<li><strong>init_fun</strong> &#8211; initialization function</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="datajoint.connection.Connection.cancel_transaction">
+<code class="descname">cancel_transaction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.connection.Connection.cancel_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels the current transaction and rolls back all changes made during the transaction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.connection.Connection.commit_transaction">
+<code class="descname">commit_transaction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.connection.Connection.commit_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Commit all changes made during the transaction and close it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.connection.Connection.in_transaction">
+<code class="descname">in_transaction</code><a class="headerlink" href="#datajoint.connection.Connection.in_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if there is an open transaction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.connection.Connection.is_connected">
+<code class="descname">is_connected</code><a class="headerlink" href="#datajoint.connection.Connection.is_connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the object is connected to the database server.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.connection.Connection.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>query</em>, <em>args=()</em>, <em>as_dict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.connection.Connection.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the specified query and return the tuple generator (cursor).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>query</strong> &#8211; mysql query</li>
+<li><strong>args</strong> &#8211; additional arguments for the client.cursor</li>
+<li><strong>as_dict</strong> &#8211; If as_dict is set to True, the returned cursor objects returns
+query results as dictionary.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.connection.Connection.start_transaction">
+<code class="descname">start_transaction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.connection.Connection.start_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a transaction error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises DataJointError:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">if there is an ongoing transaction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datajoint.connection.Connection.transaction">
+<code class="descname">transaction</code><a class="headerlink" href="#datajoint.connection.Connection.transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context manager for transactions. Opens an transaction and closes it after the with statement.
+If an error is caught during the transaction, the commits are automatically rolled back. All
+errors are raised again.</p>
+<p>Example:
+&gt;&gt;&gt; import datajoint as dj
+&gt;&gt;&gt; with dj.conn().transaction as conn:
+&gt;&gt;&gt;     # transaction is open here</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.connection.conn">
+<code class="descclassname">datajoint.connection.</code><code class="descname">conn</code><span class="sig-paren">(</span><em>host=None</em>, <em>user=None</em>, <em>passwd=None</em>, <em>init_fun=None</em>, <em>reset=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.connection.conn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a persistent connection object to be shared by multiple modules.
+If the connection is not yet established or reset=True, a new connection is set up.
+If connection information is not provided, it is taken from config which takes the
+information from dj_local_conf.json. If the password is not specified in that file
+datajoint prompts for the password.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host</strong> &#8211; hostname</li>
+<li><strong>user</strong> &#8211; mysql user</li>
+<li><strong>passwd</strong> &#8211; mysql password</li>
+<li><strong>init_fun</strong> &#8211; initialization function</li>
+<li><strong>reset</strong> &#8211; whether the connection should be reseted or not</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span id="document-blob"></span><div class="section" id="module-datajoint.blob">
+<span id="serialization-module"></span><h2>Serialization Module<a class="headerlink" href="#module-datajoint.blob" title="Permalink to this headline">¶</a></h2>
+<p>Provides serialization methods for numpy.ndarrays that ensure compatibility with Matlab.</p>
+<dl class="function">
+<dt id="datajoint.blob.pack">
+<code class="descclassname">datajoint.blob.</code><code class="descname">pack</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.blob.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packs an object into a blob to be compatible with mym.mex</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>numpy.ndarray</em>) &#8211; object to be packed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.blob.unpack">
+<code class="descclassname">datajoint.blob.</code><code class="descname">unpack</code><span class="sig-paren">(</span><em>blob</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.blob.unpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unpacks blob  data into a numpy array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>blob</strong> &#8211; mysql blob</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">unpacked data</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span id="document-declare"></span><div class="section" id="module-datajoint.declare">
+<span id="mysql-table-declaration"></span><h2>Mysql table declaration<a class="headerlink" href="#module-datajoint.declare" title="Permalink to this headline">¶</a></h2>
+<p>This module hosts functions to convert DataJoint table definitions into mysql table definitions, and to
+declare the corresponding mysql tables.</p>
+<dl class="function">
+<dt id="datajoint.declare.compile_attribute">
+<code class="descclassname">datajoint.declare.</code><code class="descname">compile_attribute</code><span class="sig-paren">(</span><em>line</em>, <em>in_key=False</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.declare.compile_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert attribute definition from DataJoint format to SQL</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>line</strong> &#8211; attribution line</li>
+<li><strong>in_key</strong> &#8211; set to True if attribute is in primary key set</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(name, sql) &#8211; attribute name and sql code for its declaration</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.declare.declare">
+<code class="descclassname">datajoint.declare.</code><code class="descname">declare</code><span class="sig-paren">(</span><em>full_table_name</em>, <em>definition</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.declare.declare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse declaration and create new SQL table accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>full_table_name</strong> &#8211; full name of the table</li>
+<li><strong>definition</strong> &#8211; DataJoint table definition</li>
+<li><strong>context</strong> &#8211; dictionary of objects that might be referred to in the table. Usually this will be locals()</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span id="document-utils"></span><div class="section" id="module-datajoint.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-datajoint.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="datajoint.utils.from_camel_case">
+<code class="descclassname">datajoint.utils.</code><code class="descname">from_camel_case</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.utils.from_camel_case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert names in camel case into underscore (_) separated names</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s</strong> &#8211; string in CamelCase notation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string in under_score notation</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">from_camel_case</span><span class="p">(</span><span class="s">&quot;TableName&quot;</span><span class="p">)</span> <span class="c"># yields &quot;table_name&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.utils.to_camel_case">
+<code class="descclassname">datajoint.utils.</code><code class="descname">to_camel_case</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.utils.to_camel_case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert names with under score (_) separation into camel case names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s</strong> &#8211; string in under_score notation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string in CamelCase notation</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">to_camel_case</span><span class="p">(</span><span class="s">&quot;table_name&quot;</span><span class="p">)</span> <span class="c"># yields &quot;TableName&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.utils.user_choice">
+<code class="descclassname">datajoint.utils.</code><code class="descname">user_choice</code><span class="sig-paren">(</span><em>prompt</em>, <em>choices=('yes'</em>, <em>'no')</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.utils.user_choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompts the user for confirmation.  The default value, if any, is capitalized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>prompt</strong> &#8211; Information to display to the user.</li>
+<li><strong>choices</strong> &#8211; an iterable of possible choices.</li>
+<li><strong>default</strong> &#8211; default choice</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the user&#8217;s choice</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span id="document-fetch"></span><div class="section" id="module-datajoint.fetch">
+<span id="fetch-objects"></span><h2>Fetch objects<a class="headerlink" href="#module-datajoint.fetch" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="datajoint.fetch.Fetch">
+<em class="property">class </em><code class="descclassname">datajoint.fetch.</code><code class="descname">Fetch</code><span class="sig-paren">(</span><em>relation</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>A fetch object that handles retrieving elements from the database table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>relation</strong> &#8211; relation the fetch object retrieves data from.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="datajoint.fetch.Fetch.as_dict">
+<code class="descname">as_dict</code><a class="headerlink" href="#datajoint.fetch.Fetch.as_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the state of the fetch object to return dictionaries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a copy of the fetch object</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">my_relation</span><span class="o">.</span><span class="n">fetch</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.fetch.Fetch.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterator that returns primary keys.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.fetch.Fetch.limit">
+<code class="descname">limit</code><span class="sig-paren">(</span><em>limit</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch.limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limits the number of items fetched.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>limit</strong> &#8211; limit on the number of items</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a copy of the fetch object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.fetch.Fetch.offset">
+<code class="descname">offset</code><span class="sig-paren">(</span><em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch.offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Offsets the number of itms fetched. Needs to be applied with limit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>offset</strong> &#8211; offset</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a copy of the fetch object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.fetch.Fetch.order_by">
+<code class="descname">order_by</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch.order_by" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the state of the fetch object to order the results by a particular attribute.
+The commands are handed down to mysql.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; the attributes to sort by. If DESC is passed after the name, then the order is descending.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a copy of the fetch object</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">my_relation</span><span class="o">.</span><span class="n">fetch</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s">&#39;language&#39;</span><span class="p">,</span> <span class="s">&#39;name DESC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="datajoint.fetch.Fetch.set_behavior">
+<code class="descname">set_behavior</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch.set_behavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the behavior like offset, limit, or order_by via keywords arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>kwargs</strong> &#8211; keyword arguments</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a copy of the fetch object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datajoint.fetch.Fetch1">
+<em class="property">class </em><code class="descclassname">datajoint.fetch.</code><code class="descname">Fetch1</code><span class="sig-paren">(</span><em>relation</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.Fetch1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch object for fetching exactly one row.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>relation</strong> &#8211; relation the fetch object fetches data from</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.fetch.copy_first">
+<code class="descclassname">datajoint.fetch.</code><code class="descname">copy_first</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.copy_first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorates methods that return an altered copy of self</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="datajoint.fetch.prepare_attributes">
+<code class="descclassname">datajoint.fetch.</code><code class="descname">prepare_attributes</code><span class="sig-paren">(</span><em>relation</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#datajoint.fetch.prepare_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by fetch.__getitem__ to deal with slices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>relation</strong> &#8211; the relation that created the fetch object</li>
+<li><strong>item</strong> &#8211; the item passed to __getitem__. Can be a string, a tuple, a list, or a slice.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a tuple of items to fetch, a list of the corresponding attributes</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises DataJointError:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first last">if item does not match one of the datatypes above</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span id="document-settings"></span><div class="section" id="module-datajoint.settings">
+<span id="config"></span><h2>Config<a class="headerlink" href="#module-datajoint.settings" title="Permalink to this headline">¶</a></h2>
+<p>Settings for DataJoint.</p>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Dimitri Yatsenko, Edgar Walker, Fabian Sinz.
+      
+        <span class="commit">
+          Revision <code>df063247</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="//readthedocs.org/projects/datajoint-python/downloads/htmlzip/latest/">htmlzip</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/datajoint-python/?fromdocs=datajoint-python">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/datajoint-python/?fromdocs=datajoint-python">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/underscore.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/doctools.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-doc-embed.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

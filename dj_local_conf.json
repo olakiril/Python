@@ -1,0 +1,11 @@
+{
+    "display.limit": 7,
+    "loglevel": "DEBUG",
+    "safemode": true,
+    "database.user": "root",
+    "database.port": 3306,
+    "database.host": "localhost",
+    "connection.init_function": null,
+    "display.width": 14,
+    "database.password": ""
+}
