@@ -12,19 +12,25 @@ NOGO_resp = np.zeros(np.size(NOGO_images))
 ALL_images = GO_images + NOGO_images
 ALL_resp = np.concatenate([GO_resp, NOGO_resp])
 
+pygame.init()
+clock = pygame.time.Clock()
+FPS = 60
 s = stimulus(ALL_images)
 s.init_block()
 
-stimes = np.zeros(2000)
-etimes = np.zeros(2000)
-for itrial in range(2000):
+stimes = np.zeros(200)
+etimes = np.zeros(200)
+for itrial in range(200):
     stimes[itrial] = time.time()
     s.init_trial()
     s.show()
-    # s.unshow()
+    clock.tick(FPS)
+    s.unshow()
     etimes[itrial] = time.time()
 
 times = etimes - stimes
 s.close()
 
-pyplot.hist(times,200)
+
+pyplot.hist(times,100)
+pyplot.show()

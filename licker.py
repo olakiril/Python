@@ -2,6 +2,7 @@
 # import sys
 # import termios
 # import fcntl
+import pygame
 
 class licker:
     """ this class handles the licks
