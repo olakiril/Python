@@ -1,9 +1,9 @@
 import pyglet
-vidPath="C:/Users/M/Desktop/test5.mov"
+vidPath='/Users/manolis/github/Python/obj1.mov'
 window = pyglet.window.Window()
 player = pyglet.media.Player()
 source = pyglet.media.StreamingSource()
-MediaLoad = pyglet.media.load(vidPath)
+MediaLoad = pyglet.media.load(vidPath, streaming=False)
 
 player.queue(MediaLoad)
 player.play()

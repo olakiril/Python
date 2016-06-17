@@ -11,6 +11,7 @@ class stimulus:
         self.loc = loc
         self.screen = pygame.display.set_mode(size, pygame.NOFRAME)
         self.def_surface = pygame.Surface(size)
+        self.def_surface.fill([88,88,88])
         self.image_h = [pygame.image.load(image) for image in images]
         self.block_sz = np.size(self.image_h)
         self.images = images
@@ -34,6 +35,9 @@ class stimulus:
     def unshow(self):
         self.screen.blit(self.def_surface, self.loc)
         pygame.display.flip()
+
+    def color(self,color):
+        self.def_surface.fill(color)
 
     def close(self):
         pygame.quit()
