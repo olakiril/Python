@@ -17,4 +17,9 @@ class licked:
         #else:
         #    return False
         self.prev_input = input
-        return input
+        if input:
+            return True
+        else:
+            return False
+
+
