@@ -7,7 +7,7 @@ pygame.mixer.quit
 
 clock = pygame.time.Clock()
 # movie = pygame.movie.Movie('C:/Users/M/Documents/ffmpeg/bin/test2.mpg')''
-movie =
+
 # movie = pygame.movie.Movie('C:/Users/M/Desktop/test4.mpg')
 # screen = pygame.display.set_mode(movie.get_size(), pygame.NOFRAME)
 screen = pygame.display.set_mode(movie.get_size())
