@@ -12,9 +12,9 @@ class licked:
 
     def lick(self):
         input = GPIO.input(26)
-        if (not self.prev_input) and input:
-            return True
-        else:
-            return False
+        # if (not self.prev_input) and input:
+        #    return True
+        #else:
+        #    return False
         self.prev_input = input
-
+        return input
