@@ -1,7 +1,7 @@
 from timer import *
 timer = timer()
 import numpy as np
-from licker import *
+from licked import *
 #from subj import Sessions, Trials, Licks
 from stimulus import *
 import pygame
@@ -59,7 +59,7 @@ while trial < max_trials:  # Each trial is one block
         # Start countdown for response
         timer.start()
         while timer.elapsed_time() < RP:  # response period
-            if licker().lick():
+            if licked().lick():
  #               lick_key = dict(lick_tmst=timer.time())
  #               Licks().insert1(dict(session, **lick_key))
                 print('Correct!' if corr_resp else 'Wrong')
@@ -78,7 +78,7 @@ while trial < max_trials:  # Each trial is one block
         stim.unshow()
         timer.start()
         while timer.elapsed_time() < ITI:
-            if licker().lick():
+            if licked().lick():
   #              lick_key = dict(lick_tmst=timer.time())
           #      Licks().insert1(dict(session, **lick_key))
                 timer.start()
