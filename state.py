@@ -11,8 +11,8 @@ import os
 os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (0,0)
 
 # Set Parameters
-w = 405
-h = 270
+w = 480
+h = 320
 trial = 1
 max_trials = 1
 RP = 2
