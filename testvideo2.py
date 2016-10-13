@@ -1,5 +1,5 @@
 import pyglet
-vidPath='/Users/manolis/github/Python/obj1.mov'
+vidPath='~/Python/obj1.mov'
 window = pyglet.window.Window()
 player = pyglet.media.Player()
 source = pyglet.media.StreamingSource()

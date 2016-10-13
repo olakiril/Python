@@ -7,12 +7,10 @@ pygame.mixer.quit
 
 clock = pygame.time.Clock()
 # movie = pygame.movie.Movie('C:/Users/M/Documents/ffmpeg/bin/test2.mpg')''
-
+movie = pygame.movie.Movie('~/Python/obj1.mov')
 # movie = pygame.movie.Movie('C:/Users/M/Desktop/test4.mpg')
 # screen = pygame.display.set_mode(movie.get_size(), pygame.NOFRAME)
 screen = pygame.display.set_mode(movie.get_size())
-
-
 
 background = pygame.Surface(movie.get_size())
 screen.blit(background,(0,0))
