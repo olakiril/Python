@@ -10,7 +10,9 @@ vid = imageio.get_reader(io.BytesIO(clip_info['clip'].tobytes()), 'ffmpeg')
 size = (256, 144)
 
 pygame.init()
-screen = pygame.display.set_mode(size,0,32)
+screen = pygame.display.set_mode(size, 0, 32)
+
+c = pygame.time.Clock()
 
 for iframe in range(100):
     for event in pygame.event.get():
@@ -21,3 +23,4 @@ for iframe in range(100):
     py_image = pygame.image.frombuffer(vid.get_data(iframe), size, "RGB")
     screen.blit(py_image, (0, 0))
     pygame.display.update()
+    c.tick_busy_loop(30)
