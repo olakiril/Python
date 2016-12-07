@@ -3,7 +3,7 @@ from pipeline import vis
 import io, imageio, pygame, sys
 import numpy as np
 
-key = dict([('movie_name', 'madmax'), ('clip_number', 1)])
+key = dict([('movie_name', 'obj1v3'), ('clip_number', 1)])
 clip_info = (vis.Movie.Clip()*vis.Movie() & key).fetch1()
 vid = imageio.get_reader(io.BytesIO(clip_info['clip'].tobytes()), 'ffmpeg')
 vsize = (clip_info['frame_width'], clip_info['frame_height'])
@@ -27,3 +27,4 @@ for iframe in range(100):  # range(vid.get_length()):
     c.tick_busy_loop(30)
 
 vid.close()
+
