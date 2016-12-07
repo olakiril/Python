@@ -29,7 +29,7 @@ class vstimulus:
         else:
             self.init_block()
 
-        self.myVideoPlayer = VideoPlayer([480, 320], fullscreen=True, soundrenderer="pyaudio", loop=False)
+        self.myVideoPlayer = VideoPlayer([480, 320], fullscreen=False, soundrenderer="pyaudio", loop=False)
         self.myVideoPlayer.load_media(self.videos[image_idx])
         self.myVideoPlayer.play()
 
@@ -41,13 +41,13 @@ class vstimulus:
 
     def unshow(self):
 
-        if hasattr(self, 'myVideoPlayer'):
-            self.myVideoPlayer.stop()
-            pygame.quit()
-        #self.def_surface = pygame.Surface(self.size)
-        #self.def_surface.fill(self.vcolor)
-        #self.screen.blit(self.def_surface, self.loc)
-        #pygame.display.flip()
+        # if hasattr(self, 'myVideoPlayer'):
+        #   self.myVideoPlayer.stop()
+        #   pygame.quit()
+        self.def_surface = pygame.Surface(self.size)
+        self.def_surface.fill(self.vcolor)
+        #self.screen.openglblit(self.def_surface, self.loc)
+        pygame.display.flip()
 
     def color(self, color):
         self.vcolor = color
