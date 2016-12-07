@@ -10,7 +10,7 @@ vsize = (clip_info['frame_width'], clip_info['frame_height'])
 ssize = (400,400)
 pos = np.divide(ssize,2) - np.divide(vsize,2)
 pygame.init()
-screen = pygame.display.set_mode(ssize, pygame.NOFRAME, 24)
+screen = pygame.display.set_mode(ssize, pygame.FULLSCREEN, 24)
 
 c = pygame.time.Clock()
 screen.fill((128,128,128))
