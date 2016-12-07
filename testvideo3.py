@@ -7,7 +7,7 @@ pygame.init()
 pygame.mixer.quit
 
 clock = pygame.time.Clock()
-Decoder.load_media(Decoder,'~/Python/obj1.mov')
+Decoder.load_media(Decoder,'obj1.mov')
 # movie = VideoFileClip("C:/Users/M/Desktop/test5.mov")
 # movie = pygame.movie.Movie('C:/Users/M/Desktop/test4.mpg')
 # screen = pygame.display.set_mode(movie.get_size(), pygame.NOFRAME)

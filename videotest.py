@@ -21,7 +21,7 @@ movie_screen = pygame.Surface(movie.get_size()).convert()
 movie.set_display(movie_screen)
 
 movie.play()
-
+d
 
 playing = True
 # for i in range(1, 100):
