@@ -1,7 +1,7 @@
 from timer import *
 timer = timer()
 import numpy as np
-from licked import *
+from licker import *
 #from subj import Sessions, Trials, Licks
 from stimulus import *
 import pygame
@@ -61,7 +61,7 @@ while trial < max_trials:  # Each trial is one block
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     quit()
 
-            if licked().lick():
+            if licker().lick():
  #               lick_key = dict(lick_tmst=timer.time())
  #               Licks().insert1(dict(session, **lick_key))
                 print('Correct!' if corr_resp else 'Wrong')
@@ -80,7 +80,7 @@ while trial < max_trials:  # Each trial is one block
         stim.unshow()
         timer.start()
         while timer.elapsed_time() < ITI:
-            if licked().lick():
+            if licker().lick():
   #              lick_key = dict(lick_tmst=timer.time())
           #      Licks().insert1(dict(session, **lick_key))
                 timer.start()
